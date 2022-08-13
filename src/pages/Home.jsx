@@ -5,6 +5,7 @@ import Nav from '../components/Nav'
 import Header from '../components/Header'
 import AboutMe from '../components/AboutMe'
 import Projects from '../components/Projects'
+import Footer from '../components/Footer'
 
 const Home = () => {
   const { loading, error, data } = useQuery(QueryAll)
@@ -19,6 +20,7 @@ const Home = () => {
           <Header header={data.headers} />
           <AboutMe about={data.aboutMes} skills={data.skills} />
           <Projects projects={data.projects} />
+          <Footer />
         </>
       )}
     </>
