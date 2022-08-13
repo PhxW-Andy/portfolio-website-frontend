@@ -1,8 +1,5 @@
 import ReactMarkdown from 'react-markdown'
 
-// import framer motion
-import { motion } from 'framer-motion'
-
 // import utils
 import { imageUrlBuilder } from '../utils/imageUrlBuilder'
 

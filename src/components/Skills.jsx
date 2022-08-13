@@ -1,6 +1,3 @@
-// import framer motion
-import { motion } from 'framer-motion'
-
 const Skills = ({ skills }) => {
   const { data } = skills
 
