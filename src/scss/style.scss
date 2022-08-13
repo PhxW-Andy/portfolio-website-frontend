@@ -1,0 +1,9 @@
+@use './base/base';
+
+// import layouts
+@use './layout/nav';
+
+// import components
+@use './components/header';
+@use './components/aboutme';
+@use './components/projects';
