@@ -1,45 +1,76 @@
 .projects {
   .projects__wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 3rem;
     @media (max-width: 991px) {
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 2rem;
+    }
+    @media (max-width: 467px) {
+      grid-template-columns: 1fr;
     }
     .project__item {
       // display: grid;
       // grid-template-columns: 15rem 1fr;
       background: rgb(33, 33, 52);
       box-shadow: 10px 10px 0px 0px rgb(43 43 47);
+      position: relative;
       .project__image {
         height: 15rem;
         position: relative;
         overflow: hidden;
+        @media (max-width: 467px) {
+          height: auto;
+        }
         img {
           width: 100%;
           position: absolute;
           top: 0;
+          @media (max-width: 467px) {
+            position: relative;
+          }
         }
       }
       .project__content {
         padding: 1.5rem;
+        padding-bottom: 10rem;
+        @media (max-width: 991px) {
+          padding-bottom: 12rem;
+        }
+        @media (max-width: 808px) {
+          padding-bottom: 1.5rem;
+        }
         h4 {
-          font-size: 1.25rem;
-          margin-bottom: 0.8rem;
+          font-size: 1.5rem;
+          line-height: 1.3;
         }
         p {
-          line-height: 1.3;
-          margin-bottom: 1rem;
+          line-height: 1.5;
+          margin: 1.3rem 0;
         }
-        ul {
+        a {
+          font-weight: 900;
+          text-decoration: underline;
+        }
+        ul:not(.techs__list) {
+          list-style-type: disc;
+          margin: 1.3rem 0;
+          margin-left: 1.25rem;
+          li {
+            margin-bottom: 0.8rem;
+            line-height: 1.5;
+          }
+        }
+        ul.techs__list {
           display: flex;
-          padding-bottom: 1.5rem;
+          flex-wrap: wrap;
           margin-bottom: 1.5rem;
+          padding-bottom: 0.5rem;
           border-bottom: 1px solid rgba(255, 255, 255, 0.3);
           li {
             font-size: 0.825rem;
             padding: 0.3rem 0.5rem;
+            margin-bottom: 1rem;
             border: 1px solid rgba(255, 255, 255, 0.5);
             &:not(:last-of-type) {
               margin-right: 0.8rem;
@@ -48,10 +79,12 @@
         }
         .btn-wrapper {
           display: flex;
-          @media (max-width: 991px) {
+          @media (max-width: 567px) {
             flex-direction: column;
             align-items: flex-start;
             gap: 0.8rem;
+          }
+          @media (max-width: 991px) {
             .btn {
               color: rgb(33, 33, 52);
               .circle {
@@ -74,6 +107,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            text-decoration: none;
 
             &:first-of-type {
               margin-right: 2rem;
@@ -94,7 +128,7 @@
             }
 
             .circle {
-              content: '';
+              content: "";
               position: absolute;
               left: 0;
               top: 0;
@@ -114,7 +148,7 @@
                 margin: auto;
                 transition: all 0.3s ease-in-out;
                 &::before {
-                  content: '';
+                  content: "";
                   position: absolute;
                   top: -0.2rem;
                   right: 0.0725rem;
@@ -126,6 +160,14 @@
                 }
               }
             }
+          }
+        }
+        .bottom {
+          position: absolute;
+          bottom: 1.5rem;
+          @media (max-width: 808px) {
+            position: relative;
+            bottom: 0;
           }
         }
       }

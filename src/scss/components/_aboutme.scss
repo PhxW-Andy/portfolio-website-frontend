@@ -3,24 +3,34 @@
     .content-2col {
       display: flex;
       margin-bottom: 8rem;
+      align-items: center;
       @media (max-width: 991px) {
         flex-direction: column;
+        align-items: flex-start;
         margin-bottom: 4rem;
       }
       .image-wrapper {
         width: 30%;
         margin-right: 5rem;
+        width: 25%;
+        margin-right: 5rem;
+        border-radius: 50%;
+        line-height: 0;
+        overflow: hidden;
         @media (max-width: 991px) {
           width: 15rem;
           margin-right: 0;
           margin-bottom: 1.5rem;
+        }
+        @media (max-width: 467px) {
+          width: 100%;
         }
         img {
           width: 100%;
         }
       }
       .description {
-        width: 70%;
+        width: 60%;
         @media (max-width: 991px) {
           width: 100%;
         }

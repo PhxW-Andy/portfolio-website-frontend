@@ -10,9 +10,7 @@ import Footer from "../components/Footer";
 const Home = () => {
   const { loading, error, data } = useQuery(QueryAll);
 
-  console.log(error);
-
-  if (error) return <p>{error}</p>;
+  if (error) return <p>error</p>;
 
   return (
     <>

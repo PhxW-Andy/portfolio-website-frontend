@@ -1,11 +1,11 @@
 // import fontawesome
-import { FaFileDownload } from 'react-icons/fa'
+import { FaFileDownload } from "react-icons/fa";
 
 // import utils
-import { imageUrlBuilder } from '../utils/imageUrlBuilder'
+import { imageUrlBuilder } from "../utils/imageUrlBuilder";
 
 const Header = ({ header }) => {
-  const { data } = header
+  const { data } = header;
 
   return (
     <header id="home">
@@ -21,9 +21,9 @@ const Header = ({ header }) => {
               {item.attributes.button.map((btn, index) => (
                 <a
                   key={index}
-                  className={`btn ${btn.download ? 'download' : ''}`}
-                  href={btn.link}
-                  target={btn.download ? '_blank' : ''}
+                  className={`btn ${btn.download ? "download" : ""}`}
+                  href={btn.download ? imageUrlBuilder(btn.link) : btn.link}
+                  target={btn.download ? "_blank" : ""}
                 >
                   <span className="circle">
                     <span className="arrow"></span>
@@ -43,7 +43,7 @@ const Header = ({ header }) => {
         </div>
       ))}
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
