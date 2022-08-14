@@ -1,12 +1,11 @@
 // import fontawesome
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 // import utils
-import { imageUrlBuilder } from '../utils/imageUrlBuilder'
+import { imageUrlBuilder } from "../utils/imageUrlBuilder";
 
 const Projects = ({ projects }) => {
-  const { data } = projects
-  console.log(data)
+  const { data } = projects;
   return (
     <section className="projects" id="projects">
       <div className="container">
@@ -17,7 +16,7 @@ const Projects = ({ projects }) => {
               <div className="project__image">
                 <img
                   src={imageUrlBuilder(
-                    item.attributes.project_image.data.attributes.url,
+                    item.attributes.project_image.data.attributes.url
                   )}
                   alt=""
                 />
@@ -36,13 +35,13 @@ const Projects = ({ projects }) => {
                       key={index}
                       className="btn"
                       href={btn.link}
-                      target={btn.download ? '_blank' : ''}
+                      target={btn.download ? "_blank" : ""}
                     >
                       <span className="circle">
                         <span className="arrow"></span>
                       </span>
                       {btn.title}
-                      {btn.title == 'GIT' ? (
+                      {btn.title == "GIT" ? (
                         <FaGithub className="icon" />
                       ) : (
                         <FaExternalLinkAlt className="icon" />
@@ -56,7 +55,7 @@ const Projects = ({ projects }) => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

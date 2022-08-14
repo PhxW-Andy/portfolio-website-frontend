@@ -1,22 +1,24 @@
-import { useQuery, gql } from '@apollo/client'
+import { useQuery, gql } from "@apollo/client";
 
 // import components
-import Nav from '../components/Nav'
-import Header from '../components/Header'
-import AboutMe from '../components/AboutMe'
-import Projects from '../components/Projects'
-import Footer from '../components/Footer'
+import Nav from "../components/Nav";
+import Header from "../components/Header";
+import AboutMe from "../components/AboutMe";
+import Projects from "../components/Projects";
+import Footer from "../components/Footer";
 
 const Home = () => {
-  const { loading, error, data } = useQuery(QueryAll)
+  const { loading, error, data } = useQuery(QueryAll);
 
-  if (error) return <p>Error...</p>
+  console.log(error);
+
+  if (error) return <p>{error}</p>;
 
   return (
     <>
+      <Nav />
       {!loading && (
         <>
-          <Nav />
           <Header header={data.headers} />
           <AboutMe about={data.aboutMes} skills={data.skills} />
           <Projects projects={data.projects} />
@@ -24,9 +26,9 @@ const Home = () => {
         </>
       )}
     </>
-  )
-}
-export default Home
+  );
+};
+export default Home;
 
 const QueryAll = gql`
   query {
@@ -34,6 +36,7 @@ const QueryAll = gql`
       data {
         id
         attributes {
+          title
           headline
           description
           button {
@@ -105,4 +108,4 @@ const QueryAll = gql`
       }
     }
   }
-`
+`;

@@ -12,6 +12,9 @@ const Header = ({ header }) => {
       {data.map((item, index) => (
         <div key={index} className="container">
           <div className="content">
+            <span className="title">
+              &gt;&gt; {item.attributes.title} &lt;&lt;
+            </span>
             <h1>{item.attributes.headline}</h1>
             <p>{item.attributes.description}</p>
             <div className="btn-wrapper">
