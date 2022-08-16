@@ -1,10 +1,11 @@
-@use './base/base';
+@use "./base/base";
 
 // import layouts
-@use './layout/nav';
-@use './layout/footer';
+@use "./layout/nav";
+@use "./layout/footer";
 
 // import components
-@use './components/header';
-@use './components/aboutme';
-@use './components/projects';
+@use "./components/header";
+@use "./components/aboutme";
+@use "./components/projects";
+@use "./components/contact";

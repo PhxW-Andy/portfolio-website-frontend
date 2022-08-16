@@ -24,7 +24,7 @@ const Projects = ({ projects }) => {
                 />
               </div>
               <div className="project__content">
-                <h4>{item.attributes.title}</h4>
+                <h3>{item.attributes.title}</h3>
                 <ReactMarkdown
                   linkTarget="_blank"
                   children={item.attributes.description}

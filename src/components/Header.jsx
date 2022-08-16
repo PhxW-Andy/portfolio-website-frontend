@@ -37,7 +37,7 @@ const Header = ({ header }) => {
           <div className="image">
             <img
               src={imageUrlBuilder(item.attributes.image.data.attributes.url)}
-              // alt={data.attributes.image.data.attributes.alternativeText}
+              alt=""
             />
           </div>
         </div>
