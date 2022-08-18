@@ -29,9 +29,10 @@
             input {
               font-size: 1.125rem;
               padding: 0.5rem;
-              border: 1px solid rgb(133, 133, 133);
+              border: 1px solid rgb(118, 118, 118);
               background: rgb(24, 24, 38);
               color: #fff;
+              border-radius: 0;
             }
             span.error {
               position: absolute;
@@ -48,6 +49,8 @@
           }
           textarea {
             background: rgb(24, 24, 38);
+            border: 1px solid rgb(118, 118, 118);
+            border-radius: 0;
             font-size: 1.125rem;
             min-height: 20rem;
             padding: 0.5rem;
