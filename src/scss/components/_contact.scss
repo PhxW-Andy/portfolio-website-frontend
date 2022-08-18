@@ -150,13 +150,16 @@
           transform: translateY(0px);
         }
 
-        @media (max-width: 620px) {
-          bottom: 23px;
-          right: 30px;
-          width: 130px;
+        @media (max-width: 728px) {
+          bottom: 0;
+          width: 100%;
           font-size: 0.8rem;
           line-height: 1.2;
           transform: translateY(0px);
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          text-align: center;
         }
       }
     }

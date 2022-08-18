@@ -53,7 +53,7 @@ const Contact = () => {
         <p className="intro-text">
           Über das Formular könnt ihr mir gerne eine Nachricht schicken oder
           auch einfach per Mail an&nbsp;
-          <a href="mailto:andrelebioda@htomail.de">andrelebioda@htomail.de</a>.
+          <a href="mailto:andrelebioda@hotmail.de">andrelebioda@hotmail.de</a>.
           Ich werde Eure Nachricht schnellstmöglich beantworten.
         </p>
         <div className="contact-form">
