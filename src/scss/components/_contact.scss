@@ -33,6 +33,10 @@
               background: rgb(24, 24, 38);
               color: #fff;
               border-radius: 0;
+              outline: none;
+              &:focus {
+                border: 1px solid #fff;
+              }
             }
             span.error {
               position: absolute;
@@ -56,6 +60,10 @@
             padding: 0.5rem;
             resize: none;
             color: #fff;
+            outline: none;
+            &:focus {
+              border: 1px solid #fff;
+            }
           }
         }
       }
