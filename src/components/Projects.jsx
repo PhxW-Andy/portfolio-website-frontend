@@ -12,6 +12,11 @@ const Projects = ({ projects }) => {
     <section className="projects" id="projects">
       <div className="container">
         <h2>Projekte</h2>
+        <p className="intro-text">
+          Die aufgelisteten Projekte wurden alle privat umgesetzt, um bereits
+          erlerntes weiter zu verinnerlichen und um neue Technologien zu
+          erlernen.
+        </p>
         <div className="projects__wrapper">
           {data.map((item, index) => (
             <div key={index} className="project__item">

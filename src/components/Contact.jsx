@@ -50,6 +50,12 @@ const Contact = () => {
     <section className="contact" id="contact">
       <div className="container">
         <h2>Kontakt</h2>
+        <p className="intro-text">
+          Über das Formular könnt ihr mir gerne eine Nachricht schicken oder
+          auch einfach per Mail an&nbsp;
+          <a href="mailto:andrelebioda@htomail.de">andrelebioda@htomail.de</a>.
+          Ich werde Eure Nachricht schnellstmöglich beantworten.
+        </p>
         <div className="contact-form">
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-wrapper">
