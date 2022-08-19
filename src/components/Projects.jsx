@@ -25,7 +25,7 @@ export default Projects;
 
 const projects = [
   {
-    img: "../assets/images/projects/todo-app.png",
+    img: "todo-app.png",
     title: "Todo App",
     desc: `Eine App um einzelne Todo's anzulegen. Es kann nach **all**, **active** und **completed** gefiltert werden. 
            Alle erledigten Todo's können zusammen gelöscht werden. Todo's werden im LocalStorage gespeichert.`,
@@ -42,7 +42,7 @@ const projects = [
     ],
   },
   {
-    img: "../assets/images/projects/sunnyside.png",
+    img: "sunnyside.png",
     title: "Sunnyside Landingpage",
     desc: `Eine einfache Landingpage, wo die Umsetzung des Layouts im Vordergrund stand. Hier ging es mir darum, bereits erlerntes anzuwenden und weiter zu verinnerlichen. 
            Das ganze ist eine Challenge, die auf [Frontendmentor.io](https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef) zu finden ist.`,
@@ -59,7 +59,7 @@ const projects = [
     ],
   },
   {
-    img: "../assets/images/projects/pokemon.png",
+    img: "pokemon.png",
     title: "Pokédex App",
     desc: `Eine Pokédex App der ersten 151 Pokémon. Über das Input-Field können die Pokémon nach dem Namen gefiltert werden. Jedes einzelne Pokémon besitzt eine Detailseite, mit weiteren Informationen.`,
     techs: ["React JS", "API", "HTML", "SCSS"],
@@ -75,7 +75,7 @@ const projects = [
     ],
   },
   {
-    img: "../assets/images/projects/country.png",
+    img: "country.png",
     title: "Country App",
     desc: `Eine App über alle Länder der Welt. Man kann nach Name und Region Filtern. Für jedes Land gibt es eine Dateilseite mit weiteren Informationen.
            Das ganze ist eine Challenge, die auf [Frontendmentor.io](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca) zu finden ist.`,

@@ -6,7 +6,8 @@ import ReactMarkdown from "react-markdown";
 const ProjectCard = ({ project }) => {
   const { img, title, desc, techs, buttons } = project;
 
-  const imgUrl = new URL(img, import.meta.url).href;
+  const imgUrl = new URL(`../assets/images/projects/${img}`, import.meta.url)
+    .href;
   return (
     <div className="project__item">
       <div className="project__image">
