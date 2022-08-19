@@ -32,6 +32,7 @@ const Contact = () => {
 
   const onSubmit = async (formData) => {
     await fetch(URL, {
+      mode: "no-cors",
       method: "POST", // or 'PUT'
       headers: {
         "Content-Type": "application/json",
