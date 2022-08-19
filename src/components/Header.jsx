@@ -1,47 +1,44 @@
+import HeaderImg from "../assets/images/developer.svg";
+
 // import fontawesome
 import { FaFileDownload } from "react-icons/fa";
 
-// import utils
-import { imageUrlBuilder } from "../utils/imageUrlBuilder";
-
-const Header = ({ header }) => {
-  const { data } = header;
+const Header = () => {
+  const pdf = new URL("../assets/uploads/lebenslauf.pdf", import.meta.url).href;
 
   return (
     <header id="home">
-      {data.map((item, index) => (
-        <div key={index} className="container">
-          <div className="content">
-            <span className="title">
-              &gt;&gt; {item.attributes.title} &lt;&lt;
-            </span>
-            <h1>{item.attributes.headline}</h1>
-            <p>{item.attributes.description}</p>
-            <div className="btn-wrapper">
-              {item.attributes.button.map((btn, index) => (
-                <a
-                  key={index}
-                  className={`btn ${btn.download ? "download" : ""}`}
-                  href={btn.download ? imageUrlBuilder(btn.link) : btn.link}
-                  target={btn.download ? "_blank" : ""}
-                >
-                  <span className="circle">
-                    <span className="arrow"></span>
-                  </span>
-                  {btn.title}
-                  {btn.download && <FaFileDownload className="down-icon" />}
-                </a>
-              ))}
-            </div>
-          </div>
-          <div className="image">
-            <img
-              src={imageUrlBuilder(item.attributes.image.data.attributes.url)}
-              alt=""
-            />
+      <div className="container">
+        <div className="content">
+          <span className="title">
+            &gt;&gt; Junior Frontend Entwickler &lt;&lt;
+          </span>
+          <h1>André Lebioda</h1>
+          <p>
+            Leidenschaftlicher Entwickler, mit dem interesse neue Technologien
+            zu erlernen und sich immer wieder neuen Herausforderungen zu
+            stellen.
+          </p>
+          <div className="btn-wrapper">
+            <a className="btn" href="#projects">
+              <span className="circle">
+                <span className="arrow"></span>
+              </span>
+              Projekte
+            </a>
+            <a className="btn download" href={pdf} target="_blank">
+              <span className="circle">
+                <span className="arrow"></span>
+              </span>
+              Download CV
+              <FaFileDownload className="down-icon" />
+            </a>
           </div>
         </div>
-      ))}
+        <div className="image">
+          <img src={HeaderImg} alt="Developer" />
+        </div>
+      </div>
     </header>
   );
 };

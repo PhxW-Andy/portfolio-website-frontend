@@ -1,37 +1,35 @@
-import ReactMarkdown from "react-markdown";
-
-// import utils
-import { imageUrlBuilder } from "../utils/imageUrlBuilder";
+import Portrait from "../assets/images/portrait.png";
 
 // import components
 import Skills from "./Skills";
 
-const AboutMe = ({ about, skills }) => {
-  const { data } = about;
+const AboutMe = () => {
   return (
     <section className="about-me" id="about">
-      {data.map((data, index) => (
-        <div key={index} className="container">
-          <h2>Über mich</h2>
-          <div className="content-2col">
-            <div className="image-wrapper">
-              <img
-                src={imageUrlBuilder(
-                  data.attributes.portrait.data.attributes.url
-                )}
-                alt=""
-              />
-            </div>
-            <div className="description">
-              <ReactMarkdown
-                children={data.attributes.description}
-              ></ReactMarkdown>
-            </div>
+      <div className="container">
+        <h2>Über mich</h2>
+        <div className="content-2col">
+          <div className="image-wrapper">
+            <img src={Portrait} alt="Portrait" />
+          </div>
+          <div className="description">
+            <p>
+              Ich bin André, 28 und komme aus Essen. Meine Ausbildung als
+              Anwendungsentwickler habe ich bei der Havas in Düsseldorf gemacht,
+              wo ich im Anschluss 2 Jahre lang als Junior Entwickler tätig war.
+            </p>
+            <p>
+              Ich bin hauptsächlich im Frontend unterwegs und stelle mich stetig
+              neuen Herausforderungen, um mich immer weiterzuentwickeln und neue
+              Technologie zu erlernen. Aber auch im Backend habe ich mir einen
+              gewissen Kenntnisstand angeeignet und versuche mich weiter zu
+              verbessern.
+            </p>
           </div>
         </div>
-      ))}
+      </div>
 
-      <Skills skills={skills} />
+      <Skills />
     </section>
   );
 };

@@ -1,19 +1,40 @@
-const Skills = ({ skills }) => {
-  const { data } = skills
-
+const Skills = () => {
   return (
     <div className="container skills" id="skills">
       <h3>Skills</h3>
-      {data.map((item, index) => (
+      {skills.map((skill, index) => (
         <div key={index}>
-          <strong>{item.attributes.title}:</strong>
-          {item.attributes.skills.map((skill, index) => (
-            <span key={index}>{skill.name}</span>
+          <strong>{skill.title}:</strong>
+          {skill.list.map((skill, index) => (
+            <span key={index}>{skill}</span>
           ))}
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;
+
+const skills = [
+  {
+    title: "Frontend",
+    list: [
+      "HTML",
+      "CSS",
+      "SCSS / LESS",
+      "Vanilla JS",
+      "React",
+      "Next JS",
+      "Bootstrap",
+    ],
+  },
+  {
+    title: "Backend",
+    list: ["Node JS", "Express", "MongoDB", "Strapi CMS", "GraphQL", "REST"],
+  },
+  {
+    title: "Sonstiges",
+    list: ["GIT", "Adobe XD", "Photoshop", "VS Code"],
+  },
+];

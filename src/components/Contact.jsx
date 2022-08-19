@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { gql, useMutation } from "@apollo/client";
 
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -19,6 +18,8 @@ const schema = yup
 const Contact = () => {
   const [confirm, setConfirm] = useState(false);
 
+  const URL = import.meta.env.VITE_EMAIL_SEND_URL;
+
   const {
     register,
     handleSubmit,
@@ -29,18 +30,25 @@ const Contact = () => {
     { defaultValues: { name: "", email: "", message: "" } }
   );
 
-  const [createFormEntry, { loading, error }] = useMutation(Create_Form_Entry);
-
-  const onSubmit = (data) => {
-    createFormEntry({
-      variables: {
-        name: data.name,
-        email: data.email,
-        message: data.message,
+  const onSubmit = async (formData) => {
+    await fetch(URL, {
+      method: "POST", // or 'PUT'
+      headers: {
+        "Content-Type": "application/json",
       },
-    });
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        // setConfirm(true);
+        console.log("Success:", data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+
     reset();
-    setConfirm(true);
+
     setTimeout(() => {
       setConfirm(false);
     }, 2000);
@@ -110,22 +118,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
-const Create_Form_Entry = gql`
-  mutation createContactFormEntry(
-    $name: String!
-    $email: String!
-    $message: String!
-  ) {
-    createContactForm(data: { name: $name, email: $email, message: $message }) {
-      data {
-        id
-        attributes {
-          name
-          email
-          message
-        }
-      }
-    }
-  }
-`;
