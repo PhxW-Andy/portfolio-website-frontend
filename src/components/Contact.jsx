@@ -32,16 +32,8 @@ const Contact = () => {
   );
 
   const onSubmit = async (formData) => {
-    const options = {
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-        Accept: "application/json, text/plain, */*",
-      },
-    };
-
     try {
-      await axios.post(URL, formData, options).then((res) => {
+      await axios.post(URL, formData).then((res) => {
         console.log(res.data);
         if (res.data == "success") {
           setConfirm(true), reset();
