@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -31,25 +32,16 @@ const Contact = () => {
   );
 
   const onSubmit = async (formData) => {
-    await fetch(URL, {
-      mode: "no-cors",
-      method: "POST", // or 'PUT'
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-      },
-      body: JSON.stringify(formData),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        // setConfirm(true);
-        console.log("Success:", data);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
+    try {
+      await axios.post(URL, { formData }).then((res) => {
+        if (res.status == 200) {
+          setConfirm(true), reset();
+        }
+        console.log(res);
       });
-
-    reset();
+    } catch (error) {
+      console.log(error);
+    }
 
     setTimeout(() => {
       setConfirm(false);
