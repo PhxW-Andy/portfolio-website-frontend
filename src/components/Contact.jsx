@@ -34,7 +34,7 @@ const Contact = () => {
   const onSubmit = async (formData) => {
     try {
       await axios.post(URL, { formData }).then((res) => {
-        if (res.status == 200) {
+        if (res.data == "success") {
           setConfirm(true), reset();
         }
         console.log(res);
