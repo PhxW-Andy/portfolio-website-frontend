@@ -7,7 +7,7 @@ const Projects = () => {
       <div className="container">
         <h2>Projekte</h2>
         <p className="intro-text">
-          Die aufgelisteten Projekte wurden alle privat umgesetzt, um bereits
+          Die aufgelisteten Projekte habe ich alle privat umgesetzt, um bereits
           erlerntes weiter zu verinnerlichen und um neue Technologien zu
           erlernen.
         </p>
