@@ -29,7 +29,7 @@ const projects = [
     title: "Todo App",
     desc: `Eine App um einzelne Todo's anzulegen. Es kann nach **all**, **active** und **completed** gefiltert werden. 
            Alle erledigten Todo's können zusammen gelöscht werden. Todo's werden im LocalStorage gespeichert.`,
-    techs: ["React JS", "HTML", "SCSS"],
+    techs: ["React", "HTML", "SCSS"],
     buttons: [
       {
         title: "GIT",
@@ -62,7 +62,7 @@ const projects = [
     img: "pokemon.png",
     title: "Pokédex App",
     desc: `Eine Pokédex App der ersten 151 Pokémon. Über das Input-Field können die Pokémon nach dem Namen gefiltert werden. Jedes einzelne Pokémon besitzt eine Detailseite, mit weiteren Informationen.`,
-    techs: ["React JS", "API", "HTML", "SCSS"],
+    techs: ["React", "API", "HTML", "SCSS"],
     buttons: [
       {
         title: "GIT",
